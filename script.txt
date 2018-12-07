@@ -1,0 +1,44 @@
+﻿# 기본 정보
+# script 파일은 반드시 UTF-8 인코딩으로 저장되어야 한다.
+# 한 줄당 명령어 하나이며, <명령어> <인자> 형태(명령어와 인자 사이에 공백 필수)로 작성한다.
+# 프로그램은 빈 줄이 나올때까지 명령어를 연속적으로 실행한다.
+# 이미지 파일의 크기는 500*720으로 한다.(해상도가 더 커도 되지만, 종횡비가 맞지 않으면 이미지가 왜곡될 것이다.)
+# 
+# 명령어 종류
+# player_img <이미지파일명>
+# -player의 이미지를 인자로 들어온 파일로 교체한다.
+# -이미지 파일명은 확장자까지 써야하며, jpg와 png를 지원한다.
+# npc_img <이미지파일명>
+# -npc의 이미지를 인자로 들어온 파일로 교체한다.
+# -이미지 파일명은 확장자까지 써야하며, jpg와 png를 지원한다.
+# npc_name <NPC이름>
+# -npc의 이름을 인자로 들어온 문자열로 교체한다.
+# text <문자열>
+# -대화상자의 문자열을 인자로 들어온 문자열로 교체한다.
+# next <script>
+# -다음장면부터 인자로 들어온 script파일이 진행한다.
+# end
+# -대화를 종료한다.
+# branch <선택지개수> <선택지1> <선택지1의 next script> <선택지2> <선택지2의 next script> ... <선택지n> <선택지n의 next script>
+# -선택지 기능. 각 선택별로 다음에 진행할 script파일을 지정해줘야한다.
+# -지원 예정
+# # <하고싶은말>
+# -이 명령어는 무시된다.
+player_img cat.png
+npc_img lion.png
+npc_name RAD
+text Hello World!
+
+text 123
+
+player_img rabbit_player.png
+npc_img girl_npc.png
+npc_name 튜투리얼
+text 한글
+
+text 한글을 쓰려면 txt파일을 utf-8형식으로 저장하세요.
+
+text test
+
+branch ~
+next script2.txt

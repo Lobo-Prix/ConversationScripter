@@ -1,0 +1,18 @@
+﻿player_img cat.png
+npc_img rabbit_npc.png
+npc_name 백토
+text Script3에 오신 것을 환영합니다.
+
+text Hello World!
+
+text 123
+
+player_img priest.png
+npc_img goddess.png
+npc_name 여신
+text 안녕하세요.
+
+text 1234
+
+branch ~
+end
