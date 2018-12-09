@@ -28,9 +28,13 @@
 player_img cat.png
 npc_img lion.png
 npc_name RAD
+whose player
 text Hello World!
 
 text 123
+
+whose npc
+text npc text
 
 player_img rabbit_player.png
 npc_img girl_npc.png
@@ -41,5 +45,4 @@ text 한글을 쓰려면 txt파일을 utf-8형식으로 저장하세요.
 
 text test
 
-branch ~
 next script2.txt

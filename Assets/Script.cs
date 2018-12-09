@@ -10,8 +10,10 @@ public class Script : MonoBehaviour {
     public Text player_name;
     public Text npc_name;
     public Text text;
+    public Image player_nameimg;
+    public Image npc_nameimg;
 
-    StreamReader f = new StreamReader("script.txt");
+    StreamReader f = new StreamReader("main.txt");
     int line_cnt = 1;
 
     Sprite LoadSprite(string path)
@@ -56,8 +58,20 @@ public class Script : MonoBehaviour {
                         throw new Exception("Error: Too few argument in text operator(Line: " + line_cnt + ")");
                     text.text = toks[1];
                     break;
-                case "branch":
+                case "textb":
+                    if (toks.Length < 2)
+                        throw new Exception("Error: Too few argument in text operator(Line: " + line_cnt + ")");
+                    text.text = toks[1];
+                    return;
+                case "whose":
+                    if (toks.Length < 2)
+                        throw new Exception("Error: Too few argument in whose operator(Line: " + line_cnt + ")");
+                    (toks[1] == "player" ? npc_img : player_img).color = new Color(0.3f, 0.3f, 0.3f, 0.3f);
+                    (toks[1] == "player" ? player_img : npc_img).color = Color.white;
                     break;
+                //handle branch in game code
+                //case "branch":
+                //    break;
                 case "next":
                     if (toks.Length < 2)
                         throw new Exception("Error: Too few argument in next operator(Line: " + line_cnt + ")");

@@ -8,11 +8,11 @@ text 안녕!
 player_img nekomimi.png
 npc_img wing.png
 npc_name NPC
+whose player
 text test1
 
 text 한글테스트
 
 text 끝
 
-branch ~
 next script3.txt

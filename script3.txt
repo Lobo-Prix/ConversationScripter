@@ -1,8 +1,10 @@
 ﻿player_img cat.png
 npc_img rabbit_npc.png
 npc_name 백토
+whose npc
 text Script3에 오신 것을 환영합니다.
 
+whose player
 text Hello World!
 
 text 123
@@ -14,5 +16,4 @@ text 안녕하세요.
 
 text 1234
 
-branch ~
 end
